@@ -1,0 +1,96 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.top{
+    width: 100%;
+    height: 80px;
+    background-color: #bd0000;
+    color: #fff;
+    display: flex;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
+.list{
+    list-style: none;
+    display: flex;
+    padding: 2px;
+}
+.logo{
+    padding: 2px;
+    text-align: center;
+    /* background: #000; */
+    align-items: center;
+    border-radius: 3px;
+}
+#heading{
+    position: relative;
+    top: 22px;
+    font-family: "BBH Bartle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.menue{
+    position: relative;
+    left: 57%; 
+}
+.menue .list{
+    position: relative;
+    top: 18px;
+}
+.menue .list li{
+    margin: 2px 8px;
+}
+.menue .list li a{
+    color: #fff;
+    text-decoration: none;
+}
+.landing{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: url("https://www.indy100.com/media-library/mia-khalifa-tweeted-in-support-of-palestine.png?id=49361664&width=2000&height=1500&coordinates=115%2C0%2C45%2C0") rgba(0, 0, 0, 0.8) ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+}
+.textContainer{
+    background-color: #bd0000;
+    height: 35%;
+    width: 35%;
+    position: relative;
+    top: 24%;
+    left: 33.5%;
+    display: flex;
+    background: rgba(54, 54, 54, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
+.nwe{
+    margin: 2px 5px;
+}
+.subheading1,.text1{
+    color: #fff;
+}
+.cbtn{
+    width: 112px;
+    height: 36px;
+    border: 2px solid;
+    border-radius: 3px;
+    background:none;
+    color: rgb(184, 137, 63);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.cbtn:hover{
+    background: #bd0000;
+    color: #aea60a;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/* newsapi */
