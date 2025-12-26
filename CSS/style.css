@@ -1,96 +1,436 @@
-*{
-    padding: 0px;
-    margin: 0px;
-}
-body{
-    padding: 0px;
-    margin: 0px;
-}
-.top{
-    width: 100%;
-    height: 80px;
-    background-color: #bd0000;
-    color: #fff;
-    display: flex;
-    padding: 10px;
-    position: sticky;
-    top: 0;
-}
-.list{
-    list-style: none;
-    display: flex;
-    padding: 2px;
-}
-.logo{
-    padding: 2px;
-    text-align: center;
-    /* background: #000; */
-    align-items: center;
-    border-radius: 3px;
-}
-#heading{
-    position: relative;
-    top: 22px;
-    font-family: "BBH Bartle", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-.menue{
-    position: relative;
-    left: 57%; 
-}
-.menue .list{
-    position: relative;
-    top: 18px;
-}
-.menue .list li{
-    margin: 2px 8px;
-}
-.menue .list li a{
-    color: #fff;
-    text-decoration: none;
-}
-.landing{
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    background: url("https://www.indy100.com/media-library/mia-khalifa-tweeted-in-support-of-palestine.png?id=49361664&width=2000&height=1500&coordinates=115%2C0%2C45%2C0") rgba(0, 0, 0, 0.8) ;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-blend-mode: darken;
-}
-.textContainer{
-    background-color: #bd0000;
-    height: 35%;
-    width: 35%;
-    position: relative;
-    top: 24%;
-    left: 33.5%;
-    display: flex;
-    background: rgba(54, 54, 54, 0.8);
-    padding: 10px;
-    border-radius: 5px;
-}
-.nwe{
-    margin: 2px 5px;
-}
-.subheading1,.text1{
-    color: #fff;
-}
-.cbtn{
-    width: 112px;
-    height: 36px;
-    border: 2px solid;
-    border-radius: 3px;
-    background:none;
-    color: rgb(184, 137, 63);
-    cursor: pointer;
-    transition: all 0.2s;
-}
-.cbtn:hover{
-    background: #bd0000;
-    color: #aea60a;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-/* newsapi */
+ body {
+     padding: 0px;
+     margin: 0px;
+     font-family: sans-serif;
+     /* Fallback font */
+     background-color: #000;
+     /* Dark background for the whole page */
+     color: #fff;
+ }
+
+ .top {
+     height: 75px;
+     background-color: #bd0000;
+     color: #fff;
+     display: flex;
+     padding: 10px;
+     position: sticky;
+     top: 0;
+     z-index: 1000;
+     justify-content: space-between;
+     /* Space out logo and menu */
+     align-items: center;
+ }
+
+ .list {
+     list-style: none;
+     display: flex;
+     padding: 2px;
+ }
+
+ .logo {
+     padding: 2px;
+     text-align: center;
+     align-items: center;
+     border-radius: 3px;
+ }
+
+ #heading {
+     font-family: "BBH Bartle", sans-serif;
+     font-weight: 400;
+     font-size: 24px;
+     font-style: normal;
+ }
+
+ .menu {
+     /* Flexbox handled by parent .top */
+ }
+
+ .menu .list li {
+     margin: 2px 10px;
+ }
+
+ .menu .list li a {
+     color: #fff;
+     text-decoration: none;
+     font-weight: bold;
+     font-size: 14px;
+     transition: color 0.3s;
+ }
+
+ .menu .list li a:hover {
+     color: #000;
+ }
+
+ .landing {
+     position: relative;
+     /* Fixed: Changed from absolute */
+     height: 90vh;
+     width: 100%;
+     /* Updated background image URL to a reliable placeholder or keep existing if it works */
+     background: url("https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=2070&auto=format&fit=crop") rgba(0, 0, 0, 0.6);
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-blend-mode: darken;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .textContainer {
+     background: rgba(189, 0, 0, 0.85);
+     /* Red background with transparency */
+     padding: 40px;
+     border-radius: 5px;
+     width: 60%;
+     max-width: 800px;
+     display: flex;
+     gap: 20px;
+     text-align: left;
+     color: #fff;
+ }
+
+ .news {
+     flex: 1;
+ }
+
+ .subheading1 {
+     font-size: 24px;
+     margin-bottom: 15px;
+     font-family: Impact, sans-serif;
+ }
+
+ .text1 {
+     font-size: 14px;
+     line-height: 1.5;
+     margin-bottom: 20px;
+ }
+
+ .cbtn {
+     padding: 10px 20px;
+     border: 2px solid #fff;
+     border-radius: 0;
+     background: transparent;
+     color: #fff;
+     cursor: pointer;
+     transition: all 0.3s;
+     font-weight: bold;
+     text-transform: uppercase;
+ }
+
+ .cbtn:hover {
+     background: #fff;
+     color: #bd0000;
+ }
+
+ /* --- New Section Styles --- */
+ .news-section {
+     position: relative;
+     padding: 40px;
+     background-color: #111;
+     display: flex;
+     gap: 30px;
+     border-top: 5px solid #bd0000;
+ }
+
+ /* Left Column: Top News */
+ .top-news-container {
+     flex: 2;
+     /* Takes up roughly 66% space */
+     position: relative;
+ }
+
+ .top-news-card {
+     position: relative;
+     width: 100%;
+     height: 500px;
+     overflow: hidden;
+     background-color: #222;
+ }
+
+ .top-news-img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     transition: transform 0.5s ease;
+ }
+
+ .top-news-card:hover .top-news-img {
+     transform: scale(1.05);
+ }
+
+ .top-news-overlay {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
+     padding: 30px;
+     box-sizing: border-box;
+     text-align: left;
+ }
+
+ .top-news-label {
+     background-color: #bd0000;
+     color: #fff;
+     padding: 5px 10px;
+     font-weight: bold;
+     font-size: 12px;
+     text-transform: uppercase;
+     display: inline-block;
+     margin-bottom: 10px;
+ }
+
+ .top-news-title {
+     font-size: 32px;
+     font-weight: bold;
+     margin-bottom: 10px;
+     line-height: 1.2;
+     font-family: Impact, sans-serif;
+ }
+
+ .top-news-desc {
+     color: #ccc;
+     font-size: 16px;
+     margin-bottom: 20px;
+     max-width: 80%;
+ }
+
+ .read-more-btn {
+     background-color: transparent;
+     color: #bd0000;
+     border: 1px solid #bd0000;
+     padding: 10px 25px;
+     font-weight: bold;
+     text-transform: uppercase;
+     cursor: pointer;
+     transition: all 0.3s;
+ }
+
+ .read-more-btn:hover {
+     background-color: #bd0000;
+     color: #fff;
+ }
+
+ /* Right Column: Other News */
+ .other-news-container {
+     flex: 1;
+     /* Takes up roughly 33% space */
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+ }
+
+ .section-title {
+     font-size: 20px;
+     font-weight: bold;
+     border-left: 5px solid #bd0000;
+     padding-left: 10px;
+     margin-bottom: 10px;
+     text-transform: uppercase;
+     font-family: Impact, sans-serif;
+ }
+
+ .side-news-card {
+     display: flex;
+     gap: 15px;
+     background-color: #1a1a1a;
+     padding: 10px;
+     transition: background 0.3s;
+     cursor: pointer;
+ }
+
+ .side-news-card:hover {
+     background-color: #252525;
+ }
+
+ .side-news-thumb {
+     width: 100px;
+     height: 70px;
+     object-fit: cover;
+     flex-shrink: 0;
+ }
+
+ .side-news-content {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+ }
+
+ .side-news-headline {
+     font-size: 14px;
+     font-weight: bold;
+     line-height: 1.3;
+     margin-bottom: 5px;
+ }
+
+ .side-news-meta {
+     font-size: 12px;
+     color: #888;
+ }
+
+ .view-all-btn {
+     margin-top: auto;
+     background: #333;
+     color: #fff;
+     border: none;
+     padding: 10px;
+     cursor: pointer;
+     text-transform: uppercase;
+     font-weight: bold;
+ }
+
+ .view-all-btn:hover {
+     background: #444;
+ }
+
+ /* --- Media Queries --- */
+
+ /* Tablet and smaller screens */
+ @media (max-width: 900px) {
+     .news-section {
+         flex-direction: column;
+     }
+
+     .top-news-card {
+         height: 400px;
+     }
+ }
+
+ /* Mobile screens */
+ @media (max-width: 480px) {
+     .top {
+         height: auto;
+         flex-direction: column;
+     }
+
+     .menu .list {
+         margin-top: 10px;
+         flex-direction: column;
+         align-items: center;
+         gap: 10px;
+     }
+
+     .textContainer {
+         width: 90%;
+         flex-direction: column;
+         padding: 20px;
+     }
+
+     .top-news-title {
+         font-size: 24px;
+     }
+
+     .news-section {
+         padding: 20px;
+     }
+
+     .news-section {
+         padding: 20px;
+     }
+ }
+
+ /* Footer Styles */
+ footer {
+     background-color: #000;
+     border-top: 1px solid #333;
+     padding: 40px;
+     text-align: center;
+     margin-top: 50px;
+ }
+
+ .footer-logo {
+     font-family: "BBH Bartle", sans-serif;
+     font-size: 24px;
+     margin-bottom: 20px;
+     color: #bd0000;
+ }
+
+ .footer-links {
+     list-style: none;
+     padding: 0;
+     display: flex;
+     justify-content: center;
+     gap: 30px;
+     margin-bottom: 20px;
+ }
+
+ .footer-links a {
+     color: #888;
+     text-decoration: none;
+     font-size: 14px;
+     text-transform: uppercase;
+     transition: color 0.3s;
+ }
+
+ .footer-links a:hover {
+     color: #fff;
+ }
+
+ /* Shared News Grid Styles (for Breaking & International) */
+ .news-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+     gap: 30px;
+     padding: 40px;
+ }
+
+ .news-card {
+     background-color: #111;
+     border-radius: 5px;
+     overflow: hidden;
+     transition: transform 0.3s;
+ }
+
+ .news-card:hover {
+     transform: translateY(-5px);
+ }
+
+ .card-img {
+     width: 100%;
+     height: 200px;
+     object-fit: cover;
+ }
+
+ .card-content {
+     padding: 20px;
+ }
+
+ .card-tag {
+     font-size: 12px;
+     color: #bd0000;
+     font-weight: bold;
+     text-transform: uppercase;
+     display: block;
+     margin-bottom: 10px;
+ }
+
+ .card-title {
+     font-size: 18px;
+     font-weight: bold;
+     margin-bottom: 10px;
+     line-height: 1.4;
+ }
+
+ .card-desc {
+     font-size: 14px;
+     color: #ccc;
+     margin-bottom: 15px;
+     line-height: 1.5;
+ }
+
+ .card-meta {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     font-size: 12px;
+     color: #888;
+ }
+
+ .card-link {
+     color: #fff;
+     text-decoration: none;
+     font-weight: bold;
+     border-bottom: 1px solid #bd0000;
+ }
